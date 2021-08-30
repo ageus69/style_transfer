@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <head>
+    <title>landing</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+  
+    <div class="navbar">
+      <a href="log"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="reg"><i class="fa fa-fw fa-pencil"></i> Register</a>
+    </div>
+
+    <!--This is a form for register user-->
+    <div class="form01">
+      <form>
+        <div class="input-element">
+          <label class="title">Register</label>
+        </div>
+        <div class="input-element">
+          <input name="username" id="username" type="text" placeholder="Username"></input>
+        </div>
+        <div class="input-element">
+          <input name="email" id="email" type="email" placeholder="Mail"></input>
+        </div>
+        <div class="input-element">
+          <input name="password" id="pass" type="text" placeholder="Password"></input>
+        </div>
+        <div class="input-element">
+          <button onClick="createUser()" type="button">Crear cuenta</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>Copyright APP</p>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../scripts/userFunctions.js"></script>
+  </body>
+</html>

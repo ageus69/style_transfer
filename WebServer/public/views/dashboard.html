@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <head>
+    <title>dashboard</title>
+    <link rel="stylesheet" href="../css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />   
+  </head>
+
+  <body>
+  
+    <div id="contenido"> 
+      <div class="navbar" id="navbar">
+        <a id="logoutLink"><i class="fa fa-fw fa-user"></i>LOGOUT</a>    
+      </div>
+
+      <div class="card-box">
+
+        <div class="row">
+          <div class="card">
+            <label class="label">Content image</label>   
+            <canvas id="canvas" width=250 height=250 style="border: solid 1px;"></canvas>
+            <label id="labelInput" for="input">Select image</label>
+            <input class="Image_input" type="file" id="input" accept="image/png, image/jpeg, image/jpg" />
+          </div>
+          
+          <div class="card">
+            <label class="label">Style image</label> 
+            <canvas id="canvas2" width=250 height=250 style="border: solid 1px;"></canvas>
+            <label id="labelInput" for="input2">Select image</label>
+            <input class="Image_input" type="file" id="input2" accept="image/png, image/jpeg, image/jpg" />
+          </div>
+
+          <div class="card">
+            <label class="label">Result</label> <br>
+            <canvas id="canvas3" width=250 height=250 style="border: solid 1px;"></canvas>
+            <div id="result"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card">
+            <div class="controls">
+              <input class="lowControl" name="nameStyle" type="text" placeholder="Name of the style" id="nameStyle"></input>
+              <input class="lowControl" name="epochs" type="number" placeholder="epochs" id="epochs"></input>
+              <input class="lowControl" name="learningRate" step="any" type="number" placeholder="learningRate" id="learningRate"></input>
+              <button class="lowControl" type="button" id="sendImg">Send images</button>
+              <button class="lowControl" type="button" id="saveStyle">Guardar estilo</button>
+              <button class="lowControl" type="button" id="reset">Reset</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>      
+    </div>
+
+    <div class="card-box" id="message">
+      <div class="row">
+        <div class="card">
+          <label id="wait">Progress => 
+            <span id="progressSpan"> 0</span>/
+            <span id="epochsSpan"></span> 
+          </label>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../scripts/userLogged.js"></script>
+    <script src="../scripts/image.js"></script>
+    <script src="../scripts/userFunctions.js"></script>
+  </body>
+</html>

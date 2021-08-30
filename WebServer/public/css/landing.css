@@ -1,0 +1,132 @@
+body{
+  margin: 0;
+  background-color: rgb(138, 186, 207);
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
+
+/* NAV BAR */
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: rgb(80, 185, 77);
+  cursor: pointer;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+} 
+
+#container {
+  background-color: floralwhite;
+}
+
+
+#labelInput {
+  width: 250px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: rgb(203, 205, 206);
+}
+#labelInput:hover {
+  background-color: rgb(165, 165, 165);
+}
+
+/* THIS IS TITLE LABEL OF CARD */
+.label {
+  width: 250px;
+  background-color: rgb(153, 223, 162);
+}
+
+.card-box {
+  margin: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-box .row{
+  width: 100%;
+  /*justify-content: center;*/
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  padding: 5px;
+  width: 300px;
+}
+.card * {
+  padding: 5px;
+  margin: 10px auto;
+  font-size: 1.2em;
+  text-align: center;
+  display: block;
+}
+.card .Image_input {
+  display: none;
+}
+.card .lowControl {
+  font-size: 1em;
+  display: inline-block;
+}
+.card button:hover{
+  cursor: pointer;
+}
+.controls {
+  background-color: rgb(52, 115, 146);
+  margin: auto;
+}
+
+.redBtn {
+  background-color: rgb(155, 3, 3);
+  color: #fff;
+}
+.yellow {
+  background-color: rgb(202, 199, 0);
+}
+.green {
+  background-color: rgb(3, 180, 77);
+}
+
+#message * {
+  display: inline-block;
+}
+
+#message .card {
+  margin: auto;
+}

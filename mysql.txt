@@ -1,0 +1,26 @@
+CREATE TABLE `users` (
+ `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+ `user` VARCHAR(255) NOT NULL,
+ `email` VARCHAR(255) NOT NULL,
+ `pass` VARCHAR(255) NOT NULL,
+ `verificated` TINYINT,
+ PRIMARY KEY (`id`),
+ UNIQUE INDEX `users_user_unique` (`user`),
+ UNIQUE INDEX `users_email_unique` (`email`)
+)
+ENGINE=INNODB;
+
+CREATE TABLE `estilos` (
+	`id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nombre` VARCHAR(255) NOT NULL,
+	`id_user` BIGINT(20) UNSIGNED NOT NULL,
+	`no_likes` BIGINT(20) UNSIGNED NULL DEFAULT NULL,
+	`epochs` INT NULL,
+	`learningRate` FLOAT NULL DEFAULT NULL,
+	PRIMARY KEY (`id`, `id_user`),
+	UNIQUE INDEX `estilos_nombre_unique` (`nombre`),
+	INDEX `estilos_users_id_user_foreign` (`id_user`),
+	CONSTRAINT `estilos_users_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB;
